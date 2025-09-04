@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 My Library</h1>
+            <button class="new-book-btn" onclick="openBookForm()">+ Add New Book</button>
+        </div>
+        
+        <div id="booksContainer" class="books-grid"></div>
+
+    </div>    
+    <div class="modal-grid" id="myModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add A new Book</h2>
+            </div>
+            <div class="modal-form">
+                <form id="id-form">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" required placeholder="Book Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Autor</label>
+                        <input type="text" id="author" name="author" required placeholder="Book Author">
+                    </div>
+                    <div class="form-group">
+                        <label for="pages">No of Pages</label>
+                        <input type="number" id="pages" name="pages" required placeholder="Book Pages">
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="read" name="read">
+                            <label for="read">I have read this book</label>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="cancel-btn"  id="cancel-btn" onclick="closeBookForm()">Cancel</button>
+                        <button type="submit" class="submit-btn" id="submit-btn">Add Book</button>
+                    </div>                             
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
